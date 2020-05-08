@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Unsplash Client</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+</head>
+<body>
+<!--    <div class="ui container">-->
+        <div>
+            <a href="/?order_by=latest"><button >最新</button></a>
+            <a href="/?order_by=popular"><button>流行</button></a>
+        </div>
+
+        <form method="get" action="/search">
+                <input name="key">
+                <input type="submit" value="搜索">
+        </form>
+
+        <hr>
+
+<!--        <div>-->
+<!--            {% for pic in pictures %}-->
+<!--                <img src="{{ pic.urls.thumb }}">-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+
+
+        <!--图片展示-->
+<!--        <div class="ui two column grid">-->
+<!--          {% for pic in pictures %}-->
+<!--          <div class="column">-->
+
+<!--            <div class="ui segment">-->
+<!--              <img src="{{ pic.urls.small }}">-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          {% endfor %}-->
+<!--        </div>-->
+
+        <div class="ui medium images">
+            {% for pic in pictures %}
+            <a href="{{ pic.urls.regular }}" class="ui medium image">
+                <img class="ui medium rounded image" src="{{ pic.urls.small }}">
+            </a>
+            {% endfor %}
+        </div>
+
+<!--    <div class="ui link cards">-->
+<!--        {% for pic in pictures %}-->
+<!--      <div class="card">-->
+<!--        <div class="image">-->
+<!--          <img src="{{ pic.urls.thumb }}">-->
+<!--        </div>-->
+<!--        <div class="extra content">-->
+<!--          <span class="right floated">2014年加入 </span>-->
+<!--          <span><i class="user icon"></i> 151 个好友 </span>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--        {% endfor %}-->
+<!--    </div>-->
+
+
+
+
+<!--    </div>-->
+</body>
+</html>
